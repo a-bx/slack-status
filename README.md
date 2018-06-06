@@ -7,3 +7,11 @@ curl -X POST \
   -F status_emoji=:lemon: \
   -F token=YOUR API TOKEN HERE
 ```
+
+
+## Deploy
+
+`heroku create`
+`git push heroku master`
+
+

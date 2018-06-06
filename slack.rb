@@ -7,7 +7,8 @@ class Slack < Sinatra::Base
   end
 
   post '/status' do
-    token = params[:token]
+    params = JSON.parse(request.body.read)
+    token = params['token']
     profile = CGI.escape(params.to_json)
 
     edpoint = 'users.profile.set'
